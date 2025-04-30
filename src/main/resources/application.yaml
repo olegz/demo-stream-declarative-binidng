@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: "messaging-test"
+  cloud:
+    function:
+      definition: "produce;consume"
+#    stream:
+#      bindings:
+#        foo-in-0:
+#          destination: foo
+#        bar-out-0:
+#          destination: foo
+
+management:
+  endpoint:
+    restart:
+      access: unrestricted
+    shutdown:
+      enabled: true
+  endpoints:
+    shutdown:
+      enabled: true
+    web:
+      exposure:
+        include: "*"
